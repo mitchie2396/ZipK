@@ -3,7 +3,7 @@
 	<head>
 		<title>LaCorte Property Management</title>
 		<link rel="stylesheet" href="PropMan.css">
-		<!-- Bootstrap CSS -->
+		<!-- Bootstrap CSS ---------------------------------------------------->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<meta name="viewport" content="width=device-width">
 	</head>
@@ -12,8 +12,8 @@
   		<header>
 				<div class="mnav-bar group">
 					<img class="logo" src="Images/home-logo-hi.png" alt="logo">
-					<a href="#" class="mnav">Home</a>
-					<a href="properties.html" class="mnav">Properties</a>
+					<a href="index.html" class="mnav">Home</a>
+					<a href="#" class="mnav">Properties</a>
 					<a href="about.html" class="mnav">About Us</a>
 					<a href="#" class="mnav">Contact</a>
 				</div>
@@ -21,32 +21,44 @@
 
   		<main>
 <!-- Start Primary Content------------------------------------------------->
-				<div class="primary content">
-					<div class="jumbotron jumbotron-fluid">
-  					<div class="container">
-							<img class="primary-img" src="Images/home-logo-hi.png" alt="LaCorte Property Management Logo">
-    					<h1 class="title">LaCorte Property Management</h1>
-  					</div>
+				<div id="slideshow">
+					<div>
+						<img src="Images/home.jpg">
+					</div>
+					<div>
+						<img src="Images/house.jpg">
 					</div>
 
-
 				</div>
+
+	<!-- JavaScript Alert!! -->
+				<script type="text/javascript">
+					$("#slideshow > div:gt(0)").hide();
+
+					setInterval(function() {
+					$('#slideshow > div:first')
+					.fadeOut(1000)
+					.next()
+					.fadeIn(1000)
+					.end()
+					.appendTo('#slideshow');
+					},  3000);
+				</script>
 			</main>
 
- 		 <footer>
-			<div class="flex-footer">
-				 <span class="footer1 flex"><p>Equal Opportunity Housing</p>
-					 <img class="social "src="Images/equal.png" alt="Equal Opportunity Housing">
-				 </span>
-				 <span class="footer2 flex" id="copyright">&copy;LaCorte Property Management, 2020</p></span>
-				 <span class="footer3 flex"><p>Find Us on Social Media!</p>
-					 <img class="social" src="Images/twitter.png" alt="Twitter">
-					 <img class="social" src="Images/facebook.png" alt="Facebook">
-					 <img class="social" src="Images/instagram.png" alt="Instagram">
-					</span>
-		 	</div>
-
-		 </footer>
+			<footer>
+ 			<div class="flex-footer">
+ 				 <span class="footer1 flex"><p>Equal Opportunity Housing</p>
+ 					 <img class="social "src="Images/equal.png" alt="Equal Opportunity Housing">
+ 				 </span>
+ 				 <span class="footer2 flex"><p id="copyright">&copy;LaCorte Property Management, 2020</p></span>
+ 				 <span class="footer3 flex"><p>Find Us on Social Media!</p>
+ 					 <img class="social" src="Images/twitter.png" alt="Twitter">
+ 					 <img class="social" src="Images/facebook.png" alt="Facebook">
+ 					 <img class="social" src="Images/instagram.png" alt="Instagram">
+ 					</span>
+ 		 	</div>
+ 		 </footer>
 
 		 <!-- Optional JavaScript -->
      <!-- jQuery first, then Popper.js, then Bootstrap JS -->

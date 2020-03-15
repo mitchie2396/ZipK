@@ -1,28 +1,37 @@
 /* Tags --------------------------------------------*/
 * {
   box-sizing: border-box;
+  font-family:'Questa';
 }
 
 img {
   max-width: 100%;
 }
 
-h1 {
-
-}
-
-footer {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
   text-align: center;
-    padding: 40px;
-    margin-top: 10px;
-    background-color: rgba(211, 211, 211, 0.35);
 }
 
 main {
   margin: auto;
-  margin-top:90px;
+  margin-top:70px;
   margin-bottom: 10px;
   padding:10px;
+}
+
+
+footer {
+  font-size: .8rem;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgba(211, 211, 211, 0.35);
 }
 
 /* Classes-----------------------------------------*/
@@ -54,7 +63,7 @@ main {
   box-shadow: 3px 3px 7px rgba(53, 53, 53, .8);
   border: solid black .7px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 15px;
   color: black;
   font-family:'Questa';
   letter-spacing: 1px;
@@ -64,9 +73,10 @@ main {
 }
 
 .mnav:hover {
+  transition: all .4s ease-in-out;
+  transform: scale(1.1);
   cursor: pointer;
-  box-shadow: 1px 1px 2px rgba(53, 53, 53, .8);
-  border-radius: 8px;
+  background-color: whitesmoke;
 }
 
 
@@ -74,13 +84,20 @@ main {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 20px;
   height: 300px;
   width: 300px;
 }
 
 .title {
+  margin: auto;
   text-align: center;
   margin-bottom: 50px;
+  background: white;
+  width: 70%;
+  border-radius: 8px;
+  border: solid #6A8EB9 4px;
+  font-weight: 350;
 }
 
 
@@ -90,8 +107,91 @@ main {
   clear: both;
 }
 
-.jumbo {
+.jumbotron {
   background: whitesmoke url(Images/house.jpg) no-repeat center / cover;
-  width: 100%;
-  margin: 0;
+}
+
+.primary-content {
+  width: 90%;
+  margin:auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin:5px 20px;
+}
+
+.flex {
+  padding: 5px;
+  margin: 5px;
+  flex: 1;
+}
+
+.column1 {
+  height: 400px;
+}
+
+.column2 {
+  flex-grow: 4;
+  padding: 10px;
+}
+
+.column3 {
+  background: whitesmoke;
+  flex-grow: 2;
+  border-radius: 5px;
+  padding: 20px;
+
+}
+
+.flex-footer {
+  display: flex;
+}
+
+.social {
+  height: 40px;
+  width: 40px;
+  margin: 8px;
+}
+
+.social:hover {
+  transition: all .4s ease-in-out;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+/* Properties Page -------------------*/
+
+#slideshow {
+  Border: solid black 2px;
+}
+
+/* Media Queries ------------------ */
+
+@media (max-width: 1024px) {
+
+  .mnav{
+    font-size: 13px;
+    margin: 20px 5px;
+    width: 90px;
+  }
+
+  .primary-img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+
+}
+
+
+@media (max-width: 770px) {
+
+
 }
